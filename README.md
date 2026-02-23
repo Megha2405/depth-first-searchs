@@ -89,7 +89,66 @@ F H <BR>
 ['0', '1', '2', '3', '4']
 
 <hr>
+<h3>
+ PROGRAM:
+</h3>
+
+<pre>
+ <code>
+
+
+def dfs(graph, start, visited, result):
+    visited.add(start)
+    result.append(start)
+
+    for neighbor in graph[start]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited, result)
+
+
+
+n, m = map(int, input("Enter number of vertices and edges: ").split())
+
+graph = {}
+
+
+for _ in range(n):
+    node = input("Enter node name: ").strip()   # remove extra spaces
+    graph[node] = []
+
+
+print("Enter edges (u v):")
+for _ in range(m):
+    u, v = input().split()
+    u = u.strip()
+    v = v.strip()
+    graph[u].append(v)
+    graph[v].append(u)   # remove if directed graph
+
+
+start_node = input("Enter start node: ").strip()
+
+
+visited = set()
+result = []
+
+dfs(graph, start_node, visited, result)
+
+print("DFS Traversal:", result)
+ </code>
+</pre>
+
+<hr>
+<h3>
+ OUTPUT:
+</h3>
+<img width="695" height="472" alt="image" src="https://github.com/user-attachments/assets/663827fd-2f01-404c-bc3a-ea7e5be6b85c" />
+
+
+<hr>
 <h3>Result:</h3>
+Hence, the solution for the given AI problem is found.
+
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
 
