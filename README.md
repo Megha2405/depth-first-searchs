@@ -147,7 +147,6 @@ print("DFS Traversal:", result)
 
 <hr>
 <h3>Result:</h3>
-Hence, the solution for the given AI problem is found.
 
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
